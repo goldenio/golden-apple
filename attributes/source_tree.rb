@@ -1,3 +1,3 @@
-default.source_tree.source = 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.7.3.dmg'
-default.source_tree.checksum = 'e4e23852505abe6c4bdf2b4fad02ff63e68b28c3784a1886a82ead44dd6398c2'
-default.source_tree.dmg_name = 'SourceTree_1.7.3'
+default.source_tree.source = 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.7.4.1.dmg'
+default.source_tree.checksum = 'c5406fb81e8e5e9f3897a6f72e5f3389d0927820e883f1545b1e2db2bcf17c04'
+default.source_tree.dmg_name = 'SourceTree_1.7.4.1'
