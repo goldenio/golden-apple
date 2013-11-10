@@ -1,2 +1,2 @@
 default.scrivener.source = 'http://scrivener.s3.amazonaws.com/Scrivener.dmg'
-default.scrivener.checksum = 'bef4c03dee8b18214f9ee15109b236a54c17b486327eaada9bd16a78d4b5b037'
+default.scrivener.checksum = '62a2dfb25e42075956d1f141f72c6a129015902511cb04b76a306cd09c9ca14f'
