@@ -2,15 +2,15 @@ package 'mysql'
 
 execute 'add mysql plist to launch agents' do
   command 'ln -sf /usr/local/opt/mysql/homebrew.mxcl.mysql.plist ~/Library/LaunchAgents'
-  only_if do
-    ::File.exist? '/usr/local/opt/mysql/homebrew.mxcl.mysql.plist'
+  not_if do
+    ::File.exists? node.mysql.launch_agent_plist
   end
 end
 
 execute 'load mysql as launch daemon' do
-  command 'launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist'
+  command "launchctl load #{node.mysql.launch_agent_plist}"
   not_if do
-    system 'launchctl list homebrew.mxcl.mysql'
+    system 'launchctl list homebrew.mxcl.mysql > /dev/null'
   end
 end
 
