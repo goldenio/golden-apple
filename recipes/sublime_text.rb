@@ -22,14 +22,14 @@ end
 node.sublime_text.templates.each do |file|
   template file[:name] do
     source "sublime_text/#{file[:name]}.erb"
-    path File.expand_path(file[:name], File.join(node.sublime_text.packages_path, 'User'))
+    path ::File.expand_path(file[:name], ::File.join(node.sublime_text.packages_path, 'User'))
     action :create
   end
 end
 
 remote_file 'Package Control.sublime-package' do
   source 'http://sublime.wbond.net/Package%20Control.sublime-package'
-  path File.expand_path('Package Control.sublime-package', node.sublime_text.installed_packages_path)
+  path ::File.expand_path('Package Control.sublime-package', node.sublime_text.installed_packages_path)
   action :create
 end
 

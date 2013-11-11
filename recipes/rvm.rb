@@ -3,14 +3,14 @@ remote_file 'rvm-installer' do
   path node.rvm.installer
   action :create
   not_if do
-    ::File.exist? node.rvm.installer
+    ::File.exists? node.rvm.installer
   end
 end
 
 execute 'install rvm' do
   command "bash #{node.rvm.installer}"
   not_if do
-    ::File.exist? "#{node.rvm.home}/bin/rvm"
+    ::File.exists? "#{node.rvm.home}/bin/rvm"
   end
 end
 
@@ -22,7 +22,7 @@ bash 'rvm requirements' do
     rvm requirements
   CODE
   not_if do
-    ::File.exist? '/usr/local/etc/openssl/cert.pem'
+    ::File.exists? '/usr/local/etc/openssl/cert.pem'
   end
 end
 
@@ -35,7 +35,7 @@ bash 'install default ruby' do
     rvm osx-ssl-certs update all
   CODE
   not_if do
-    ::File.exist? "#{node.rvm.home}/bin/#{node.rvm.default_ruby}"
+    ::File.exists? "#{node.rvm.home}/bin/#{node.rvm.default_ruby}"
   end
 end
 

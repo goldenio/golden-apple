@@ -1,7 +1,7 @@
-zip_file = File.expand_path("#{node.archiver.zip_name}.zip", Chef::Config[:file_cache_path])
+zip_file = ::File.expand_path("#{node.archiver.zip_name}.zip", Chef::Config[:file_cache_path])
 
 remote_file 'Archiver.zip' do
-  source  node.archiver.source
+  source node.archiver.source
   checksum node.archiver.checksum
   path zip_file
   action :create
