@@ -13,3 +13,6 @@ default.java.apple.checksum = '81e1155e44b2c606db78487ca1a02e31dbb3cfbf7e0581a4d
 default.java.apple.dmg_name = 'JavaForOSX2013-05'
 default.java.apple.volumes_dir = 'Java for OS X 2013-005'
 default.java.apple.package_id = 'com.apple.pkg.JavaForMacOSX107'
+
+# default.java.apple.java_home = '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/'
+default.java.apple.java_home = '/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/'
